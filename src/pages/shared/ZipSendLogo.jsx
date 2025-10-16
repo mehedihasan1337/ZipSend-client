@@ -9,4 +9,4 @@ const ZipSendLogo = () => {
     );
 };
 
-export default ZipSendLogo;
+export default ZipSendLogo; 

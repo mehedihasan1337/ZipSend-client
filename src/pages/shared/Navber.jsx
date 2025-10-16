@@ -8,7 +8,7 @@ const Navber = () => {
       <li><NavLink to="/about"> About Us </NavLink> </li>
     </>
     return (
-        <div className='mt-7 '>
+        <div className='my-7 '>
             <div className="navbar bg-base-100 shadow-sm rounded-2xl">
   <div className="navbar-start">
     <div className="dropdown">
