@@ -4,7 +4,7 @@ import ZipSendLogo from './ZipSendLogo';
 const Footer = () => {
     return (
         <div>
-            <footer className="footer footer-horizontal footer-center bg-neutral text-neutral-content p-10">
+            <footer className="footer footer-horizontal footer-center bg-neutral text-neutral-content p-10 mt-7">
   <aside>
    <div>
     <ZipSendLogo></ZipSendLogo>
