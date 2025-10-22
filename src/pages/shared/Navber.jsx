@@ -1,11 +1,17 @@
 import React from 'react';
 import { NavLink } from 'react-router';
 import ZipSendLogo from './ZipSendLogo';
+;
 
 const Navber = () => {
     const navItems = <>
+ 
       <li><NavLink to="/"> Home </NavLink> </li>
+      <li><NavLink to="/about"> Services </NavLink> </li>
+      <li><NavLink to="/about"> Coverage </NavLink> </li>
       <li><NavLink to="/about"> About Us </NavLink> </li>
+      <li><NavLink to="/about"> Pricing </NavLink> </li>
+      <li><NavLink to="/about"> Be a Rider </NavLink> </li>
     </>
     return (
         <div className='my-7 '>
@@ -27,7 +33,7 @@ const Navber = () => {
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-     {navItems}
+    {navItems}
     </ul>
   </div>
   <div className="navbar-end">

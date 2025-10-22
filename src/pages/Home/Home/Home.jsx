@@ -6,6 +6,7 @@ import Slayed from '../Slayed/Slayed';
 import Benefites from '../Benefites/benefites';
 import BeMerchant from '../Bemerchant/BeMerchant';
 import Testimonials from '../Testimonials/Testimonials';
+import Frequently from '../Frequently/Frequently';
 
 const Home = () => {
     return (
@@ -17,6 +18,7 @@ const Home = () => {
             <Benefites></Benefites>
             <BeMerchant></BeMerchant>
             <Testimonials></Testimonials>
+            <Frequently></Frequently>
         </div>
     );
 };
