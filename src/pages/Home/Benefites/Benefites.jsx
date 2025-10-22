@@ -26,9 +26,9 @@ const features = [
 const Benefites = () => {
   return (
     <section className="py-16 " id="why-choose-us">
-      <div className="max-w-6xl mx-auto px-4 space-y-6">
+      <div  className="max-w-6xl mx-auto px-4 space-y-6">
         {features.map((item, index) => (
-          <div
+          <div data-aos="zoom-in-up"
             key={index}
             className="hover:shadow-[#03373D] shadow-lg relative bg-base-100 rounded-2xl p-10 flex flex-col sm:flex-row items-center sm:items-center gap-6 hover:shadow-md transition-all"
           >

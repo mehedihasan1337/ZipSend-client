@@ -119,7 +119,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <div className=" testimonials-container rounded-4xl mt-10 bg-white ">
+    <div  className=" testimonials-container rounded-4xl mt-10 bg-white ">
       <img className="mx-auto mb-6" src={customer} alt="" />
       <h2 className="title">What our customers are sayings</h2>
       <p className="subtitle">
@@ -135,7 +135,7 @@ export default function Testimonials() {
         className="mySwiper "
       >
         {testimonials.map((item, index) => (
-          <SwiperSlide key={index} className="testimonial-card">
+          <SwiperSlide  key={index} className="testimonial-card">
             <Quote className="quote-icon" />
             <p className="message">{item.message}</p>
             <div className="author">

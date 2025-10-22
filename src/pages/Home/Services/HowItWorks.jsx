@@ -31,7 +31,7 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section className="py-16" >
+    <section data-aos="fade-up" className="py-16" >
       <div className="max-w-6xl mx-auto px-4 text-center">
         {/* Section Title */}
         <h2 className="text-2xl  sm:text-3xl font-bold mb-7 text-[#03373D] border-primary inline-block pb-1">

@@ -3,7 +3,7 @@ import React from "react";
 const ServiceCard = ({ service}) => {
     const {icon: Icon, title, description }=service
   return (
-    <div className="card bg-base-100 shadow-md hover:bg-[#CAEB66]  transition p-5 text-center rounded-2xl border border-base-200">
+    <div data-aos="flip-up" className="card bg-base-100 shadow-md hover:bg-[#CAEB66]  transition p-5 text-center rounded-2xl border border-base-200">
       <div className="flex justify-center mb-3 text-[#03373D]  text-4xl">
         <Icon />
       </div>

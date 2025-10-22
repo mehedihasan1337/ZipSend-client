@@ -17,7 +17,7 @@ const Footer = () => {
       tracking and zero hassle. From personal packages
        to business shipments — we deliver on time, every time.</p>
    </div>
-   <nav className=''><NavItems></NavItems></nav>
+   <nav className='text-[#CAEB66]'><NavItems></NavItems></nav>
    <div className="flex justify-center gap-6">
         <a
           href="https://facebook.com"

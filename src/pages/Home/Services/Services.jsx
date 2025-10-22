@@ -50,7 +50,7 @@ const servicesData = [
 
 const Services = () => {
   return (
-    <section className="py-16 bg-[#03373D] mt-7 rounded-3xl" id="services">
+    <section  className="py-16 bg-[#03373D] mt-7 rounded-3xl" id="services">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-10 text-white">
           <h2 className="text-3xl font-bold mb-3">Our Services</h2>
