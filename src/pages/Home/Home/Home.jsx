@@ -5,6 +5,7 @@ import HowItWorks from '../Services/HowItWorks';
 import Slayed from '../Slayed/Slayed';
 import Benefites from '../Benefites/benefites';
 import BeMerchant from '../Bemerchant/BeMerchant';
+import Testimonials from '../Testimonials/Testimonials';
 
 const Home = () => {
     return (
@@ -15,6 +16,7 @@ const Home = () => {
             <Slayed></Slayed>
             <Benefites></Benefites>
             <BeMerchant></BeMerchant>
+            <Testimonials></Testimonials>
         </div>
     );
 };
