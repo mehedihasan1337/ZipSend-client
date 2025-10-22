@@ -1,78 +1,153 @@
-import React, { useState, useRef, useEffect } from 'react';
-import './TestimonialsStyles.css';
-
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-cards";
+import { EffectCards } from "swiper/modules";
+import { Quote } from "lucide-react";
+import "./TestimonialsStyles.css";
+import customer from "../../../assets/customer-top.png"
 const testimonials = [
-  { quote: "Postura Pro changed my life!", name: "Alice Rahman", role: "Yoga Instructor" },
-  { quote: "My back pain is gone. Highly recommend!", name: "Tanvir Hasan", role: "Software Engineer" },
-  { quote: "I feel more confident with better posture.", name: "Nusrat Jahan", role: "Marketing Manager" },
-  { quote: "Simple, effective, and comfortable.", name: "Rafiul Islam", role: "Graphic Designer" },
-  { quote: "Great support and alignment all day.", name: "Mehedi Hasan", role: "Fitness Coach" },
-  { quote: "Postura Pro is a game changer!", name: "Farzana Akter", role: "Product Manager" },
+  {
+    name: "Awlad Hossin",
+    role: "Senior Product Designer",
+    message:
+      "A posture corrector works by providing support and gentle alignment to your shoulders, back, and spine, encouraging you to maintain proper posture throughout the day.",
+  },
+  {
+    name: "Rasel Ahamed",
+    role: "CTO",
+    message:
+      "It provides consistent posture support, helping you maintain proper alignment effortlessly throughout your workday.",
+  },
+  {
+    name: "Nasir Uddin",
+    role: "CEO",
+    message:
+      "A posture corrector ensures stability and helps relieve pain by aligning your spine naturally with ease.",
+  },
+  {
+    name: "Maruf Hasan",
+    role: "UX Engineer",
+    message:
+      "It keeps your shoulders in place and helps build muscle memory for correct posture even when you’re not wearing it.",
+  },
+  {
+    name: "Sadia Noor",
+    role: "Marketing Lead",
+    message:
+      "This posture corrector boosts your confidence by helping you stand tall and feel more energized.",
+  },
+  {
+    name: "Fahim Rahman",
+    role: "Software Engineer",
+    message:
+      "Using it daily helps improve back support, reduces strain, and encourages healthier posture habits.",
+  },
+  {
+    name: "Awlad Hossin",
+    role: "Senior Product Designer",
+    message:
+      "A posture corrector works by providing support and gentle alignment to your shoulders, back, and spine, encouraging you to maintain proper posture throughout the day.",
+  },
+  {
+    name: "Rasel Ahamed",
+    role: "CTO",
+    message:
+      "It provides consistent posture support, helping you maintain proper alignment effortlessly throughout your workday.",
+  },
+  {
+    name: "Nasir Uddin",
+    role: "CEO",
+    message:
+      "A posture corrector ensures stability and helps relieve pain by aligning your spine naturally with ease.",
+  },
+  {
+    name: "Maruf Hasan",
+    role: "UX Engineer",
+    message:
+      "It keeps your shoulders in place and helps build muscle memory for correct posture even when you’re not wearing it.",
+  },
+  {
+    name: "Sadia Noor",
+    role: "Marketing Lead",
+    message:
+      "This posture corrector boosts your confidence by helping you stand tall and feel more energized.",
+  },
+  {
+    name: "Fahim Rahman",
+    role: "Software Engineer",
+    message:
+      "Using it daily helps improve back support, reduces strain, and encourages healthier posture habits.",
+  },
+  {
+    name: "Awlad Hossin",
+    role: "Senior Product Designer",
+    message:
+      "A posture corrector works by providing support and gentle alignment to your shoulders, back, and spine, encouraging you to maintain proper posture throughout the day.",
+  },
+  {
+    name: "Rasel Ahamed",
+    role: "CTO",
+    message:
+      "It provides consistent posture support, helping you maintain proper alignment effortlessly throughout your workday.",
+  },
+  {
+    name: "Nasir Uddin",
+    role: "CEO",
+    message:
+      "A posture corrector ensures stability and helps relieve pain by aligning your spine naturally with ease.",
+  },
+  {
+    name: "Maruf Hasan",
+    role: "UX Engineer",
+    message:
+      "It keeps your shoulders in place and helps build muscle memory for correct posture even when you’re not wearing it.",
+  },
+  {
+    name: "Sadia Noor",
+    role: "Marketing Lead",
+    message:
+      "This posture corrector boosts your confidence by helping you stand tall and feel more energized.",
+  },
+  {
+    name: "Fahim Rahman",
+    role: "Software Engineer",
+    message:
+      "Using it daily helps improve back support, reduces strain, and encourages healthier posture habits.",
+  },
 ];
 
-const TestimonialCarousel = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const cardRefs = useRef([]);
-
-  const scrollToCard = (index) => {
-    cardRefs.current[index]?.scrollIntoView({
-      behavior: 'smooth',
-      inline: 'center',
-      block: 'nearest',
-    });
-  };
-
-  useEffect(() => {
-    scrollToCard(activeIndex);
-  }, [activeIndex]);
-
-  const handlePrev = () => {
-    setActiveIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
-  };
-
-  const handleNext = () => {
-    setActiveIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
-  };
-
+export default function Testimonials() {
   return (
-    <div className="testimonial-section">
-      <h2>What our customers are sayings</h2>
-      <p className="description">
-        Enhance posture, mobility, and well-being effortlessly with Postura Pro. Achieve proper alignment, reduce pain, and strengthen your body with ease!
+    <div className=" testimonials-container rounded-4xl mt-10 bg-white ">
+      <img className="mx-auto mb-6" src={customer} alt="" />
+      <h2 className="title">What our customers are sayings</h2>
+      <p className="subtitle">
+        Enhance posture, mobility, and well-being 
+        effortlessly with Posture Pro. Achieve proper alignment,
+         reduce pain, and strengthen your body with ease!
       </p>
 
-      <div className="carousel-container">
-        <button className="nav-button" onClick={handlePrev}>‹</button>
-
-        <div className="carousel">
-          {testimonials.map((t, index) => (
-            <div
-              key={index}
-              ref={(el) => (cardRefs.current[index] = el)}
-              className={`testimonial-card ${index === activeIndex ? 'active' : ''}`}
-              onClick={() => setActiveIndex(index)}
-            >
-              <div className="quote">"{t.quote}"</div>
-              <div className="name">{t.name}</div>
-              <div className="role">{t.role}</div>
+      <Swiper
+        effect={"cards"}
+        grabCursor={true}
+        modules={[EffectCards]}
+        className="mySwiper"
+      >
+        {testimonials.map((item, index) => (
+          <SwiperSlide key={index} className="testimonial-card">
+            <Quote className="quote-icon" />
+            <p className="message">{item.message}</p>
+            <div className="author">
+              <div className="avatar">{item.name.charAt(0)}</div>
+              <div>
+                <h4>{item.name}</h4>
+                <p>{item.role}</p>
+              </div>
             </div>
-          ))}
-        </div>
-
-        <button className="nav-button" onClick={handleNext}>›</button>
-      </div>
-
-      <div className="dots">
-        {testimonials.map((_, index) => (
-          <span
-            key={index}
-            className={`dot ${index === activeIndex ? 'active' : ''}`}
-            onClick={() => setActiveIndex(index)}
-          ></span>
+          </SwiperSlide>
         ))}
-      </div>
+      </Swiper>
     </div>
   );
-};
-
-export default TestimonialCarousel;
+}
