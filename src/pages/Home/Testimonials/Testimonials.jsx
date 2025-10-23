@@ -44,6 +44,30 @@ const testimonials = [
       "Using it daily helps improve back support, reduces strain, and encourages healthier posture habits.",
   },
   {
+    name: "Nasir Uddin",
+    role: "CEO",
+    message:
+      "A posture corrector ensures stability and helps relieve pain by aligning your spine naturally with ease.",
+  },
+  {
+    name: "Maruf Hasan",
+    role: "UX Engineer",
+    message:
+      "It keeps your shoulders in place and helps build muscle memory for correct posture even when you’re not wearing it.",
+  },
+  {
+    name: "Sadia Noor",
+    role: "Marketing Lead",
+    message:
+      "This posture corrector boosts your confidence by helping you stand tall and feel more energized.",
+  },
+  {
+    name: "Fahim Rahman",
+    role: "Software Engineer",
+    message:
+      "Using it daily helps improve back support, reduces strain, and encourages healthier posture habits.",
+  },
+  {
     name: "Awlad Hossin",
     role: "Senior Product Designer",
     message:
