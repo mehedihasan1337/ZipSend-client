@@ -43,7 +43,7 @@ const HowItWorks = () => {
           {steps.map((item, idx) => (
             <div
               key={idx}
-              className="bg-base-100 border border-gray-200 rounded-2xl shadow-lg p-6 text-center hover:shadow-[#03373D]  transition-all"
+              className="bg-white border border-gray-200 rounded-2xl hover:shadow-lg shadow-sm shadow-[#a8dd08] p-6 text-center hover:shadow-[#03373D]  transition-all"
             >
               <div className="flex justify-center mb-4 text-[#a8dd08] text-4xl">
                 <item.icon />

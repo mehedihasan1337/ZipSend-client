@@ -30,7 +30,7 @@ const Benefites = () => {
         {features.map((item, index) => (
           <div data-aos="zoom-in-up"
             key={index}
-            className="hover:shadow-[#03373D] shadow-lg relative bg-base-100 rounded-2xl p-10 flex flex-col sm:flex-row items-center sm:items-center gap-6 hover:shadow-md transition-all"
+            className="hover:shadow-lg shadow-sm shadow-[#a8dd08] text-center hover:shadow-[#03373D]  relative bg-base-100 rounded-2xl p-10 flex flex-col sm:flex-row items-center sm:items-center gap-6 transition-all"
           >
             {/* Image */}
             <div className="flex justify-center items-center w-40 h-40 flex-shrink-0">

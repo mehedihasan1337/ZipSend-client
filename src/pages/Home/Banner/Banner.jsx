@@ -6,7 +6,8 @@ import bannerImg3 from '../../../assets/banner/banner3.png'
 import { Carousel } from 'react-responsive-carousel';
 const Banner = () => {
     return (
-        <Carousel autoPlay={true} infiniteLoop={true} showThumbs={false}>
+       <div className=''>
+         <Carousel  autoPlay={true} infiniteLoop={true} showThumbs={false}>
             <div>
                 <img src={bannerImg1} />
             </div>
@@ -17,6 +18,7 @@ const Banner = () => {
                 <img src={bannerImg3} />
             </div>
         </Carousel>
+       </div>
     );
 };
 

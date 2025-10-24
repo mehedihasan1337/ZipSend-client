@@ -15,7 +15,7 @@ const Navber = () => {
   </>
   return (
     <div className='my-7 '>
-      <div className="navbar bg-base-100 shadow-sm rounded-2xl">
+      <div className="navbar bg-white  shadow-sm shadow-[#a8dd08] hover:shadow-lg rounded-2xl">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
