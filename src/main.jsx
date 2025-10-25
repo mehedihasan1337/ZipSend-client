@@ -5,17 +5,20 @@ import { RouterProvider } from "react-router/dom";
 import { router } from './router/router.jsx';
 
 import AOS from 'aos';
-import 'aos/dist/aos.css'; 
- AOS.init({
-      duration: 500,  
-      once: true,      
-      startEvent: 'scroll' 
-    });
+import 'aos/dist/aos.css';
+import AuthProvider from './assets/contexts/AuthContext/AuthProvider.jsx';
+AOS.init({
+  duration: 500,
+  once: true,
+  startEvent: 'scroll'
+});
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <div className='font-rubik max-w-7xl mx-auto'>
-      <RouterProvider router={router} />,
+      <AuthProvider>
+        <RouterProvider router={router} />
+      </AuthProvider>,
     </div>
   </StrictMode>,
 )
