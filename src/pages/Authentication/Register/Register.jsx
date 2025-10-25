@@ -1,10 +1,20 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import useAuth from '../../../hooks/useAuth';
 
 const Register = () => {
     const { register, handleSubmit, formState: { errors } } = useForm()
+    const { createUser } = useAuth()
+
     const oneSubmit = data => {
         console.log(data)
+        createUser(data.email, data.password)
+            .then(result => {
+                console.log(result.user)
+            })
+            .catch(error => {
+                console.error(error)
+            })
     }
     return (
         <div>
@@ -38,7 +48,7 @@ const Register = () => {
                             }
                             {
                                 errors.password?.type === 'minLength' &&
-                                 <p className='text-red-500'>Password must be 6 characters or longer</p>
+                                <p className='text-red-500'>Password must be 6 characters or longer</p>
                             }
 
                             <div><a className="link link-hover">Forgot password?</a></div>
