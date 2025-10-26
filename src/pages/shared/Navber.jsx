@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import ZipSendLogo from './ZipSendLogo';
 ;
 
@@ -38,7 +38,7 @@ const Navber = () => {
         </div>
       <div className="navbar-end">
           <div className=' grid md:grid-cols-2 gap-3 '>
-          <button className=" border-2 text-[#CAEB66] border-[#CAEB66] p-2 rounded-xl hover:text-black hover:bg-[#CAEB66] ">Sign In</button>
+          <button className=" border-2 text-[#CAEB66] border-[#CAEB66] p-2 rounded-xl hover:text-black hover:bg-[#CAEB66] "><Link to="/login">Sign In</Link></button>
           <button className="btn shadow-none bg-[#CAEB66] border-none text-black rounded-xl">Be a rider</button>
 
 
