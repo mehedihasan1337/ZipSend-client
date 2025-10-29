@@ -15,7 +15,7 @@ AOS.init({
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <div className='font-rubik max-w-7xl mx-auto'>
+    <div className='font-rubik  mx-auto'>
       <AuthProvider>
         <RouterProvider router={router} />
       </AuthProvider>,

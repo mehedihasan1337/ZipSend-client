@@ -5,7 +5,7 @@ import Footer from '../pages/shared/Footer';
 
 const RootLayout = () => {
     return (
-        <div>
+        <div className='font-rubik max-w-7xl mx-auto'>
             <Navber></Navber>
               <Outlet></Outlet>
               <Footer></Footer>

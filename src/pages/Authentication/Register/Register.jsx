@@ -2,6 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import useAuth from '../../../hooks/useAuth';
 import { Link } from 'react-router';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Register = () => {
     const { register, handleSubmit, formState: { errors } } = useForm()
@@ -19,16 +20,22 @@ const Register = () => {
     }
     return (
         <div>
-            <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <div className="card w-full max-w-sm">
                 <div className="card-body">
-                    <h2 className='text-5xl font-bold'>Create Account</h2>
+                    <h2 className='text-4xl font-bold'>Create Account</h2>
                     <form onSubmit={handleSubmit(oneSubmit)}>
                         <fieldset className="fieldset">
-                            {/* email */}
-                            <label className="label">Email</label>
-                            <input type="email"
+                           
+                            <label className="label">Name</label>
+                            <input type="name "
+                                {...register('name', { required: true })}
+                                className="input w-full"
+                                placeholder="Name" />
+                                {/* email */}
+                            <label className="label">Email</label>    
+                            <input type="email "
                                 {...register('email', { required: true })}
-                                className="input"
+                                className="input w-full"
                                 placeholder="Email" />
                             {
                                 errors.email?.type === 'required' && <p
@@ -40,7 +47,7 @@ const Register = () => {
                             <label className="label">Password</label>
                             <input type="password"
                                 {...register("password", { required: true, minLength: 6 })}
-                                className="input"
+                                className="input w-full"
                                 placeholder="Password" />
                             {
                                 errors.password?.type === 'required' && <p
@@ -57,6 +64,8 @@ const Register = () => {
                             <button className="btn bg-[#CAEB66]  text-black font-bold  mt-4">Register</button>
                         </fieldset>
                         <p><small> Already have an account?  <Link className='text-blue-500 font-bold text-sm' to="/login"> login</Link></small></p>
+                    
+                        <SocialLogin></SocialLogin>
                     </form>
                 </div>
             </div>
