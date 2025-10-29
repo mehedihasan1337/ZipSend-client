@@ -18,7 +18,7 @@ const BangladeshMap = ({serviceCenters}) => {
   const position = [23.8103, 90.4125];
 
   return (
-    <div className="min-h-screen bg-base-200 p-6">
+    <div className="min-h-screen rounded-3xl bg-base-200 p-6">
       {/* Title */}
       <h1 className="text-3xl font-bold text-center mb-2">
         We are available in 64 districts
@@ -37,7 +37,7 @@ const BangladeshMap = ({serviceCenters}) => {
 
       {/* Map Section */}
       <div className="flex justify-center">
-        <div className="w-full max-w-4xl h-[500px] rounded-xl overflow-hidden shadow-lg">
+        <div className="w-full max-w-4xl h-[650px] rounded-xl overflow-hidden shadow-lg">
           <MapContainer center={position} zoom={7} style={{ height: "100%", width: "100%" }}>
             <TileLayer
               attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
