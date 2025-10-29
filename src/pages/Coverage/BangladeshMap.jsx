@@ -11,7 +11,7 @@ L.Icon.Default.mergeOptions({
   shadowUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png",
 });
 
-const BangladeshMap = () => {
+const BangladeshMap = ({serviceCenters}) => {
   const [searchText, setSearchText] = useState("");
 
   // Default position: Dhaka
@@ -43,9 +43,16 @@ const BangladeshMap = () => {
               attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <Marker position={position}>
-              <Popup>Dhaka — Our Service Center</Popup>
-            </Marker>
+           {
+            serviceCenters.map((center,index)=>  <Marker 
+                key={index}
+            position={[center.latitude, center.longitude]}>
+              <Popup>
+                 <strong>{center.district}</strong> <br />
+                 {center.covered_area.join(", ")} 
+              </Popup>
+            </Marker>)
+           }
           </MapContainer>
         </div>
       </div>
