@@ -10,9 +10,9 @@ const MapUpdater = ({ district }) => {
   useEffect(() => {
     if (district) {
       const { latitude, longitude } = district;
-      map.flyTo([latitude, longitude], 10, {
+      map.flyTo([latitude, longitude], 18, {
         animate: true,
-        duration: 2.5,
+        duration: 1.5,
         easeLinearity: 0.25,
       });
     }
