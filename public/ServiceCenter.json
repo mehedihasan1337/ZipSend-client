@@ -399,7 +399,7 @@
     "region": "Khulna",
     "district": "Satkhira",
     "city": "Satkhira",
-    "covered_area": ["Tala", "Assasuni", "Kalaroa", "Debhata","Kaligang"],
+    "covered_area": ["Tala", "Assasuni", "Kalaroa", "Debhata","Kaliganj"],
     "status": "active",
     "flowchart": "https://example.com/satkhira-flowchart.png",
     "longitude": 89.0809,
